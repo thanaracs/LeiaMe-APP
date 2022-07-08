@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"  th:fragment="modelheader">
+<head>
+
+</head>
+<body>
+
+<div th:insert="fragments/header :: modelheader"></div>
+<img class="img-inicial" src="/img/image_processing20210429-28556-1wrpti5.png">
+<div class="container boxgeral anima" id="container-3">
+    <p>Seja bem-vindo(a) ao Beco Diagonal...</p>
+    <h3>Nenhuma varinha é igual a outra assim como ninguém é igual a nós.</h3>
+</div>
+<style>
+    body{
+        background-color: #040113;
+    }
+    .img-inicial{
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        width: 600px;
+    }
+    #container-3{
+        width: 800px;
+        position: absolute;
+        left: 25%;
+        top: 15%
+    }
+    h3{;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        text-shadow: 0px 0px 15px #9C41DD, 0px 0px 5px rgba(156, 65, 221, 0.99);
+        animation: pisca normal infinite .8s, escrever normal 5s steps(55) both;
+        display: inline-block;
+        border-right: 2px solid rgba(91, 59, 131, 0.76);
+        background-color: #040113;
+        display: inline-block;
+        max-width: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+
+
+    }
+    .rodape{
+        position: fixed;
+        top: 95%;
+        width: 100%;
+        text-align: center;
+    }
+    @keyframes pisca {
+        100%{
+            border-right-color: transparent;
+        }
+    }
+    @keyframes escrever {
+        100%{
+            max-width: 100%;
+        }
+    }
+</style>
+<div class="rodape" th:insert="fragments/footer :: modelfooter"></div>
+</body>
+</html>
